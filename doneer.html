@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Doneer — Bokes & Soep</title>
+  <title>Doneer | Bokes & Soep</title>
   <meta name="description" content="Steun vzw Burgers in Beweging met een donatie. Elke bijdrage helpt ons wekelijks vers brood en warme soep te bezorgen aan schoolkinderen in Genk.">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="logos/logo_kleur_3000px.png">
@@ -107,8 +107,8 @@
     <a href="over-ons.html" class="nav__link">Over ons</a>
     <a href="team.html" class="nav__link">Team</a>
     <a href="nieuws.html" class="nav__link">Nieuws</a>
-    <a href="doneer.html" class="nav__link" style="color: var(--red);">Doneer</a>
-    <a href="contact.html" class="nav__link" style="color: var(--red); margin-top: 1rem;">Contacteer ons</a>
+    <a href="doneer.html" class="nav__link active" style="color: var(--red); font-weight: 900;">Doneer</a>
+    <a href="contact.html" class="nav__link nav__cta" style="margin-top: 0.5rem;">Contacteer ons</a>
   </div>
 
   <!-- HERO -->
@@ -278,15 +278,15 @@
       <div class="grid-3 reveal">
         <div style="background: var(--white); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
           <p style="font-style: italic; font-size: 0.9375rem; margin-bottom: 1.25rem; line-height: 1.7;">"Ik doneer elke maand een klein bedrag. Het geeft me een goed gevoel te weten dat kinderen in Genk elke week iets warms krijgen."</p>
-          <p style="font-size: 0.8125rem; font-weight: 700; color: var(--red);">— Lena, maandelijkse donor</p>
+          <p style="font-size: 0.8125rem; font-weight: 700; color: var(--red);">Lena, maandelijkse donor</p>
         </div>
         <div style="background: var(--white); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
           <p style="font-style: italic; font-size: 0.9375rem; margin-bottom: 1.25rem; line-height: 1.7;">"Ons bedrijf steunt Bokes &amp; Soep al twee jaar. Transparant, lokaal en met echte impact. Dat is zeldzaam."</p>
-          <p style="font-size: 0.8125rem; font-weight: 700; color: var(--red);">— Jan, CEO lokaal KMO</p>
+          <p style="font-size: 0.8125rem; font-weight: 700; color: var(--red);">Jan, CEO lokaal KMO</p>
         </div>
         <div style="background: var(--white); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
           <p style="font-style: italic; font-size: 0.9375rem; margin-bottom: 1.25rem; line-height: 1.7;">"Ik heb het belastingattest aangevraagd. Alles was supersnel geregeld. Prettige vzw om mee samen te werken."</p>
-          <p style="font-size: 0.8125rem; font-weight: 700; color: var(--red);">— Sophie, donor</p>
+          <p style="font-size: 0.8125rem; font-weight: 700; color: var(--red);">Sophie, donor</p>
         </div>
       </div>
     </div>
@@ -311,7 +311,7 @@
         <div class="value-item">
           <div class="value-item__icon">&#129365;</div>
           <h4>Producten schenken</h4>
-          <p>Groenten, brood, soepbases — schenkingen in natura zijn welkom. Neem contact op voor afstemming.</p>
+          <p>Groenten, brood, soepbases: schenkingen in natura zijn welkom. Neem contact op voor afstemming.</p>
           <a href="contact.html" class="btn btn--outline" style="margin-top: 1.25rem; font-size: 0.875rem; padding: 0.6rem 1.25rem;">Contacteer ons</a>
         </div>
         <div class="value-item">
@@ -362,7 +362,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copy">&copy; 2026 vzw Burgers in Beweging &middot; Alle rechten voorbehouden</p>
+        <p class="footer__copy">&copy; 2019&ndash;2026 vzw Burgers in Beweging &middot; Alle rechten voorbehouden</p>
         <p class="footer__btw">BTW BE 0599.882.939</p>
       </div>
     </div>
@@ -370,7 +370,7 @@
 
   <script src="script.js"></script>
   <script>
-    // Amount selector — all data from data attributes, no runtime HTML
+    // Amount selector - all data from data attributes, no runtime HTML
     document.querySelectorAll('.amount-btn').forEach(function(btn) {
       btn.addEventListener('click', function() {
         document.querySelectorAll('.amount-btn').forEach(function(b) { b.classList.remove('selected'); });

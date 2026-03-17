@@ -156,6 +156,9 @@ p {
   right: 0;
   z-index: 1000;
   padding: 1rem 0;
+  background: rgba(255, 248, 240, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition: var(--transition);
 }
 
@@ -181,7 +184,7 @@ p {
 }
 
 .nav__logo img {
-  height: 48px;
+  height: 56px;
   width: auto;
 }
 
