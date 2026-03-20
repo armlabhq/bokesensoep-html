@@ -348,36 +348,50 @@
   </footer>
 
   <script src="script.js?v=2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
   <script>
     // EPC QR code generator for SEPA transfers
     function generateEpcQr(amount) {
       var epcData = [
-        'BCD',           // Service Tag
-        '002',           // Version
-        '1',             // Character set (UTF-8)
-        'SCT',           // Identification
-        'GEBABEBB',      // BIC
-        'vzw Burgers in Beweging', // Beneficiary
-        'BE82001973035368',        // IBAN
-        'EUR' + amount,  // Amount
-        '',              // Purpose
-        '',              // Remittance (structured)
-        'Donatie Bokes en Soep'  // Remittance (unstructured)
+        'BCD',
+        '002',
+        '1',
+        'SCT',
+        'GEBABEBB',
+        'vzw Burgers in Beweging',
+        'BE82001973035368',
+        'EUR' + amount,
+        '',
+        '',
+        'Donatie Bokes en Soep'
       ].join('\n');
+
+      var qr = qrcode(0, 'M');
+      qr.addData(epcData);
+      qr.make();
 
       var container = document.getElementById('qr-code');
       while (container.firstChild) { container.removeChild(container.firstChild); }
-      QRCode.toCanvas(epcData, {
-        width: 200,
-        margin: 2,
-        color: { dark: '#2D2926', light: '#FFFFFF' }
-      }, function(err, canvas) {
-        if (!err) {
-          canvas.style.borderRadius = 'var(--radius-md)';
-          container.appendChild(canvas);
+
+      var size = 200;
+      var moduleCount = qr.getModuleCount();
+      var cellSize = size / moduleCount;
+      var canvas = document.createElement('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      canvas.style.borderRadius = 'var(--radius-md)';
+      var ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fillRect(0, 0, size, size);
+      ctx.fillStyle = '#2D2926';
+      for (var row = 0; row < moduleCount; row++) {
+        for (var col = 0; col < moduleCount; col++) {
+          if (qr.isDark(row, col)) {
+            ctx.fillRect(col * cellSize, row * cellSize, cellSize + 0.5, cellSize + 0.5);
+          }
         }
-      });
+      }
+      container.appendChild(canvas);
       document.getElementById('qr-amount-text').textContent = '\u20AC' + amount;
     }
 
