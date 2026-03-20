@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onze scholen | Bokes & Soep</title>
+  <meta name="description" content="Ontdek de liefdevolle scholen waar Bokes & Soep wekelijks verse soep en brood bezorgt aan kinderen in Genk.">
+  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="icon" type="image/png" href="logos/logo_kleur_3000px.png">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="main-nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="logos/logo_kleur_3000px.png" alt="Bokes & Soep logo">
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="over-ons.html" class="nav__link">Over ons</a></li>
+          <li><a href="team.html" class="nav__link">Team</a></li>
+          <li><a href="nieuws.html" class="nav__link">Nieuws</a></li>
+          <li><a href="scholen.html" class="nav__link active">Liefdevolle scholen</a></li>
+          <li><a href="doneer.html" class="nav__link" style="color: var(--red); font-weight: 900;">Doneer</a></li>
+          <li><a href="contact.html" class="nav__link nav__cta">Contact</a></li>
+        </ul>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menu openen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="mobile-nav">
+    <a href="index.html" class="nav__link">Home</a>
+    <a href="over-ons.html" class="nav__link">Over ons</a>
+    <a href="team.html" class="nav__link">Team</a>
+    <a href="nieuws.html" class="nav__link">Nieuws</a>
+    <a href="scholen.html" class="nav__link active">Liefdevolle scholen</a>
+    <a href="doneer.html" class="nav__link" style="color: var(--red); font-weight: 900;">Doneer</a>
+    <a href="contact.html" class="nav__link nav__cta" style="margin-top: 0.5rem;">Contacteer ons</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="page-hero__eyebrow">Onze scholen</span>
+      <h1 class="page-hero__title animate-fade-up">
+        Onze <em>liefdevolle</em><br>scholen
+      </h1>
+      <p class="page-hero__lead animate-fade-up animate-delay-1">
+        Achter elke kom soep en elke boterham staat een school die mee het verschil wil maken. Onze liefdevolle scholen engageren zich om kinderen een warme plek te bieden, waar gezonde voeding vanzelfsprekend is.
+      </p>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="grid-4 reveal">
+        <div class="stat-block">
+          <span class="stat-block__num">12</span>
+          <span class="stat-block__label">scholen</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-block__num">2581</span>
+          <span class="stat-block__label">kinderen</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-block__num">9</span>
+          <span class="stat-block__label">actief</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-block__num">3</span>
+          <span class="stat-block__label">in voorbereiding</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHOLEN GRID -->
+  <section class="section section--cream">
+    <div class="container">
+      <!-- Filters -->
+      <div style="display: flex; gap: 0.75rem; margin-bottom: 3rem; flex-wrap: wrap;" class="reveal">
+        <button class="btn btn--primary" style="font-size: 0.875rem; padding: 0.6rem 1.25rem;" onclick="filterScholen('all', this)">Alles</button>
+        <button class="btn btn--outline" style="font-size: 0.875rem; padding: 0.6rem 1.25rem;" onclick="filterScholen('actief', this)">Actief</button>
+        <button class="btn btn--outline" style="font-size: 0.875rem; padding: 0.6rem 1.25rem;" onclick="filterScholen('voorbereiding', this)">Voorbereiding</button>
+      </div>
+
+      <div class="grid-3">
+
+        <!-- School 1 -->
+        <div class="card reveal school-item" data-status="actief">
+          <div class="card__body">
+            <div class="news-meta">
+              <span class="news-tag" style="background: #E8F5E9; color: #2E7D32;">Actief</span>
+            </div>
+            <h3 class="card__title">Vrije Basisschool Genk</h3>
+            <p class="card__text">De Vrije Basisschool Broederschool in Genk centrum is een katholieke basisschool voor kleuters en lager onderwijs die zichzelf profileert als 'de school met een hart voor kinderen'.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--cream-dark);">
+              <span style="font-size: 0.875rem; color: var(--warm-gray);">📍 Genk</span>
+              <span style="font-size: 0.875rem; font-weight: 700; color: var(--warm-black);">👧 218 kinderen</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- School 2 -->
+        <div class="card reveal school-item" data-status="actief">
+          <div class="card__body">
+            <div class="news-meta">
+              <span class="news-tag" style="background: #E8F5E9; color: #2E7D32;">Actief</span>
+            </div>
+            <h3 class="card__title">Vrije Basisschool Mater Dei</h3>
+            <p class="card__text">Vrije Basisschool Mater Dei is een katholieke basisschool in Genk die zowel kleuteronderwijs als lager onderwijs aanbiedt.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--cream-dark);">
+              <span style="font-size: 0.875rem; color: var(--warm-gray);">📍 Genk</span>
+              <span style="font-size: 0.875rem; font-weight: 700; color: var(--warm-black);">👧 296 kinderen</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- School 3 -->
+        <div class="card reveal school-item" data-status="actief">
+          <div class="card__body">
+            <div class="news-meta">
+              <span class="news-tag" style="background: #E8F5E9; color: #2E7D32;">Actief</span>
+            </div>
+            <h3 class="card__title">Vrije Basisschool Mickey Mouse - De Sleutel (Sledderlo)</h3>
+            <p class="card__text">De Vrije Basisschool Mickey Mouse - De Sleutel is een katholieke basisschool gelegen in de wijk Sledderlo in Genk. De school biedt zowel kleuter- als lager onderwijs aan.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--cream-dark);">
+              <span style="font-size: 0.875rem; color: var(--warm-gray);">📍 Genk</span>
+              <span style="font-size: 0.875rem; font-weight: 700; color: var(--warm-black);">👧 49 kinderen</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- School 4 -->
+        <div class="card reveal school-item" data-status="actief">
+          <div class="card__body">
+            <div class="news-meta">
+              <span class="news-tag" style="background: #E8F5E9; color: #2E7D32;">Actief</span>
+            </div>
+            <h3 class="card__title">Vrije Basisschool Mickey Mouse - De Sleutel</h3>
+            <p class="card__text">De Vrije Basisschool Mickey Mouse - De Sleutel is een katholieke basisschool gelegen in de wijk Sledderlo in Genk. De school biedt zowel kleuter- als lager onderwijs aan.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--cream-dark);">
+              <span style="font-size: 0.875rem; color: var(--warm-gray);">📍 Genk</span>
+              <span style="font-size: 0.875rem; font-weight: 700; color: var(--warm-black);">👧 101 kinderen</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- School 5 -->
+        <div class="card reveal school-item" data-status="actief">
+          <div class="card__body">
+            <div class="news-meta">
+              <span class="news-tag" style="background: #E8F5E9; color: #2E7D32;">Actief</span>
+            </div>
+            <h3 class="card__title">Vrije Basisschool Oud-Waterschei 't Schoolke</h3>
+            <p class="card__text">Vrije Basisschool Oud-Waterschei 't Schoolke (officieel: Parochiale Basisschool Oud Waterschei) is een basisschool voor vrij gesubsidieerd onderwijs gevestigd in Genk. De school staat bekend om haar gezellige sfeer en kleinschalige karakter.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--cream-dark);">
+              <span style="font-size: 0.875rem; color: var(--warm-gray);">📍 Genk</span>
+              <span style="font-size: 0.875rem; font-weight: 700; color: var(--warm-black);">👧 281 kinderen</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- School 6 -->
+        <div class="card reveal school-item" data-status="actief">
+          <div class="card__body">
+            <div class="news-meta">
+              <span class="news-tag" style="background: #E8F5E9; color: #2E7D32;">Actief</span>
+            </div>
+            <h3 class="card__title">Vrije Basisschool Boxbergheide</h3>
+            <p class="card__text">Vrije Basisschool Boxbergheide is een katholieke school voor kleuter- en lager onderwijs in Genk. De school staat bekend om haar groene karakter en actieve inzet voor natuurbehoud op het eigen terrein.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--cream-dark);">
+              <span style="font-size: 0.875rem; color: var(--warm-gray);">📍 Genk</span>
+              <span style="font-size: 0.875rem; font-weight: 700; color: var(--warm-black);">👧 607 kinderen</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- School 7 -->
+        <div class="card reveal school-item" data-status="actief">
+          <div class="card__body">
+            <div class="news-meta">
+              <span class="news-tag" style="background: #E8F5E9; color: #2E7D32;">Actief</span>
+            </div>
+            <h3 class="card__title">Vrije Basisschool Sint Albertus</h3>
+            <p class="card__text">De Vrije Basisschool Sint-Albertus (vaak kortweg de Sint-Albertusschool genoemd) is de school gelegen aan het Kerkplein in Genk (wijk Zwartberg).</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--cream-dark);">
+              <span style="font-size: 0.875rem; color: var(--warm-gray);">📍 Genk</span>
+              <span style="font-size: 0.875rem; font-weight: 700; color: var(--warm-black);">👧 231 kinderen</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- School 8 -->
+        <div class="card reveal school-item" data-status="actief">
+          <div class="card__body">
+            <div class="news-meta">
+              <span class="news-tag" style="background: #E8F5E9; color: #2E7D32;">Actief</span>
+            </div>
+            <h3 class="card__title">Vrije Basisschool De Bladwijzer</h3>
+            <p class="card__text">Vrije Basisschool De Bladwijzer is een kleinschalige, ontwikkelingsgerichte buurtschool in de wijk Waterschei te Genk. De school biedt zowel kleuter- als lager onderwijs aan in een modern gebouw nabij het Thorpark.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--cream-dark);">
+              <span style="font-size: 0.875rem; color: var(--warm-gray);">📍 Genk</span>
+              <span style="font-size: 0.875rem; font-weight: 700; color: var(--warm-black);">👧 181 kinderen</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- School 9 -->
+        <div class="card reveal school-item" data-status="voorbereiding">
+          <div class="card__body">
+            <div class="news-meta">
+              <span class="news-tag" style="background: #FFF3E0; color: #E65100;">Voorbereiding</span>
+            </div>
+            <h3 class="card__title">Vrije Basisschool De Bret (vestiging 1)</h3>
+            <p class="card__text">Vrije Basisschool (VBS) De Bret is een gesubsidieerde katholieke basisschool in Genk met twee vestigingen. De school staat bekend om haar actieve ouderraad en een sterke focus op ouderparticipatie.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--cream-dark);">
+              <span style="font-size: 0.875rem; color: var(--warm-gray);">📍 Genk</span>
+              <span style="font-size: 0.875rem; font-weight: 700; color: var(--warm-black);">👧 257 kinderen</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- School 10 -->
+        <div class="card reveal school-item" data-status="voorbereiding">
+          <div class="card__body">
+            <div class="news-meta">
+              <span class="news-tag" style="background: #FFF3E0; color: #E65100;">Voorbereiding</span>
+            </div>
+            <h3 class="card__title">Vrije Basisschool De Bret (vestiging 2)</h3>
+            <p class="card__text">Vrije Basisschool (VBS) De Bret is een gesubsidieerde katholieke basisschool in Genk met twee vestigingen. De school staat bekend om haar actieve ouderraad en een sterke focus op ouderparticipatie.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--cream-dark);">
+              <span style="font-size: 0.875rem; color: var(--warm-gray);">📍 Genk</span>
+              <span style="font-size: 0.875rem; font-weight: 700; color: var(--warm-black);">👧 50 kinderen</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- School 11 -->
+        <div class="card reveal school-item" data-status="voorbereiding">
+          <div class="card__body">
+            <div class="news-meta">
+              <span class="news-tag" style="background: #FFF3E0; color: #E65100;">Voorbereiding</span>
+            </div>
+            <h3 class="card__title">Vrije Basisschool De Bret (vestiging 3)</h3>
+            <p class="card__text">Vrije Basisschool (VBS) De Bret is een gesubsidieerde katholieke basisschool in Genk met twee vestigingen. De school staat bekend om haar actieve ouderraad en een sterke focus op ouderparticipatie.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--cream-dark);">
+              <span style="font-size: 0.875rem; color: var(--warm-gray);">📍 Genk</span>
+              <span style="font-size: 0.875rem; font-weight: 700; color: var(--warm-black);">👧 206 kinderen</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- School 12 -->
+        <div class="card reveal school-item" data-status="actief">
+          <div class="card__body">
+            <div class="news-meta">
+              <span class="news-tag" style="background: #E8F5E9; color: #2E7D32;">Actief</span>
+            </div>
+            <h3 class="card__title">Vrije Basisschool Optimum Genk</h3>
+            <p class="card__text">VBS Optimum Genk is een kleinschalige, non-confessionele en vrij-gesubsidieerde basisschool in de wijk Sledderlo in Genk. De school biedt zowel kleuter- als lager onderwijs aan en opende haar deuren in september 2023.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--cream-dark);">
+              <span style="font-size: 0.875rem; color: var(--warm-gray);">📍 Genk</span>
+              <span style="font-size: 0.875rem; font-weight: 700; color: var(--warm-black);">👧 104 kinderen</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">
+            <img src="logos/logo_kleur_3000px.png" alt="Bokes & Soep">
+          </div>
+          <p class="footer__tagline">
+            Bokes &amp; Soep bezorgt wekelijks verse, warme soep en brood aan schoolkinderen in Genk. Warmte op een bord, liefde in elke hap.
+          </p>
+        </div>
+        <div>
+          <p class="footer__title">Navigatie</p>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="over-ons.html" class="footer__link">Over ons</a></li>
+            <li><a href="team.html" class="footer__link">Team</a></li>
+            <li><a href="nieuws.html" class="footer__link">Nieuws</a></li>
+            <li><a href="scholen.html" class="footer__link">Scholen</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Meedoen</p>
+          <ul class="footer__links">
+            <li><a href="contact.html" class="footer__link">Word vrijwilliger</a></li>
+            <li><a href="doneer.html" class="footer__link">Doneer</a></li>
+            <li><a href="contact.html" class="footer__link">Partner worden</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Contact</p>
+          <address class="footer__address" style="font-style: normal;">
+            vzw Burgers in Beweging<br>
+            Terboekt 49<br>
+            3600 Genk<br><br>
+            <a href="mailto:info@bokesensoep.be" class="footer__link">info@bokesensoep.be</a>
+            <br><a href="tel:+32498306230" class="footer__link">0498 30 62 30</a>
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025&ndash;2026 vzw Burgers in Beweging &middot; Alle rechten voorbehouden</p>
+        <p class="footer__btw">BTW BE 0599.882.939</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=2"></script>
+  <script>
+    function filterScholen(status, btn) {
+      document.querySelectorAll('.school-item').forEach(item => {
+        if (status === 'all' || item.dataset.status === status) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+      document.querySelectorAll('[onclick^="filterScholen"]').forEach(b => {
+        b.className = 'btn btn--outline';
+        b.style.fontSize = '0.875rem';
+        b.style.padding = '0.6rem 1.25rem';
+      });
+      btn.className = 'btn btn--primary';
+      btn.style.fontSize = '0.875rem';
+      btn.style.padding = '0.6rem 1.25rem';
+    }
+  </script>
+</body>
+</html>

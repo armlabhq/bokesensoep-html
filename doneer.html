@@ -92,6 +92,7 @@
           <li><a href="over-ons.html" class="nav__link">Over ons</a></li>
           <li><a href="team.html" class="nav__link">Team</a></li>
           <li><a href="nieuws.html" class="nav__link">Nieuws</a></li>
+          <li><a href="scholen.html" class="nav__link">Liefdevolle scholen</a></li>
           <li><a href="doneer.html" class="nav__link active" style="color: var(--red); font-weight: 900;">Doneer</a></li>
           <li><a href="contact.html" class="nav__link nav__cta">Contact</a></li>
         </ul>
@@ -107,6 +108,7 @@
     <a href="over-ons.html" class="nav__link">Over ons</a>
     <a href="team.html" class="nav__link">Team</a>
     <a href="nieuws.html" class="nav__link">Nieuws</a>
+    <a href="scholen.html" class="nav__link">Liefdevolle scholen</a>
     <a href="doneer.html" class="nav__link active" style="color: var(--red); font-weight: 900;">Doneer</a>
     <a href="contact.html" class="nav__link nav__cta" style="margin-top: 0.5rem;">Contacteer ons</a>
   </div>
@@ -177,7 +179,7 @@
 
             <div class="iban-display" id="iban-block" title="Klik om te kopiëren">
               <p class="iban-label">Rekeningnummer (IBAN)</p>
-              <p class="iban-number" id="iban">Wordt binnenkort toegevoegd</p>
+              <p class="iban-number" id="iban">BE82 0019 7303 5368</p>
               <p class="copy-hint">Klik om te kopiëren</p>
               <div class="copy-success" id="copy-success">&#10003; Gekopieerd!</div>
             </div>
@@ -317,7 +319,7 @@
           <div class="footer__logo">
             <img src="logos/logo_kleur_3000px.png" alt="Bokes &amp; Soep">
           </div>
-          <p class="footer__tagline">vzw Burgers in Beweging bezorgt wekelijks vers brood en warme soep aan schoolkinderen in Genk.</p>
+          <p class="footer__tagline">Bokes &amp; Soep bezorgt wekelijks verse, warme soep en brood aan schoolkinderen in Genk. Warmte op een bord, liefde in elke hap.</p>
         </div>
         <div>
           <p class="footer__title">Navigatie</p>
@@ -326,6 +328,7 @@
             <li><a href="over-ons.html" class="footer__link">Over ons</a></li>
             <li><a href="team.html" class="footer__link">Team</a></li>
             <li><a href="nieuws.html" class="footer__link">Nieuws</a></li>
+            <li><a href="scholen.html" class="footer__link">Scholen</a></li>
             <li><a href="doneer.html" class="footer__link">Doneer</a></li>
             <li><a href="faq.html" class="footer__link">FAQ</a></li>
             <li><a href="contact.html" class="footer__link">Contact</a></li>
@@ -344,6 +347,7 @@
           <address class="footer__address" style="font-style: normal;">
             vzw Burgers in Beweging<br>Terboekt 49<br>3600 Genk<br><br>
             <a href="mailto:info@bokesensoep.be" class="footer__link">info@bokesensoep.be</a>
+            <br><a href="tel:+32498306230" class="footer__link">0498 30 62 30</a>
           </address>
         </div>
       </div>
@@ -375,7 +379,6 @@
     // Copy IBAN to clipboard
     document.getElementById('iban-block').addEventListener('click', function() {
       var iban = document.getElementById('iban').textContent.trim();
-      if (iban === 'Wordt binnenkort toegevoegd') return;
       if (!navigator.clipboard) return;
       navigator.clipboard.writeText(iban).then(function() {
         var success = document.getElementById('copy-success');
