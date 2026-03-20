@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE: ghcr.io/wooter/bokesensoep-html
+  IMAGE: ghcr.io/armlabhq/bokesensoep-html
 
 jobs:
   build-and-deploy:
