@@ -56,7 +56,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Connect Tailscale
-        uses: tailscale/github-action@v3
+        uses: tailscale/github-action@v2
         with:
           oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
@@ -68,14 +68,8 @@ jobs:
           IMAGE_TAG: ${{ steps.env.outputs.image_tag }}
           SSH_KEY: ${{ secrets.FSN1_SSH_KEY }}
         run: |
-          set -x
           mkdir -p ~/.ssh
           echo "$SSH_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          wc -c ~/.ssh/id_rsa
-          head -1 ~/.ssh/id_rsa
-          sleep 5
-          tailscale status || true
-          ssh-keyscan -H fsn1 >> ~/.ssh/known_hosts 2>&1 || ssh-keyscan -H 100.118.111.71 >> ~/.ssh/known_hosts 2>&1 || true
-          cat ~/.ssh/known_hosts | wc -l
-          ssh -v -o StrictHostKeyChecking=accept-new wouter@fsn1 "cd $DEPLOY_DIR && sed -i 's/^IMAGE_TAG=.*/IMAGE_TAG='\"$IMAGE_TAG\"'/' .env && docker compose pull && docker compose up -d"
+          ssh-keyscan -H fsn1 >> ~/.ssh/known_hosts 2>/dev/null
+          ssh wouter@fsn1 "cd $DEPLOY_DIR && sed -i 's/^IMAGE_TAG=.*/IMAGE_TAG='\"$IMAGE_TAG\"'/' .env && docker compose pull && docker compose up -d"
